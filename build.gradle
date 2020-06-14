@@ -22,8 +22,8 @@ repositories {
 }
 
 dependencies {
-    implementation spigot()
-    implementation protocolLib()
+    compileOnly spigot()
+    compileOnly protocolLib()
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
