@@ -26,10 +26,11 @@ repositories {
 dependencies {
     compileOnly spigot()
     compileOnly protocolLib()
+    compileOnly vault()
     testImplementation group: 'junit', name: 'junit', version: '4.12'
     testImplementation 'com.github.seeseemelk:MockBukkit-v1.15:0.3.0-SNAPSHOT'
 }
 
 spigot {
-    depends = ['ProtocolLib']
+    depends 'ProtocolLib', 'Vault'
 }
