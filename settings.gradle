@@ -1,1 +1,12 @@
 rootProject.name = 'SpigradleSample'
+
+include 'spigot', 'spigot-kotlin',
+        'bungeecord', 'nukkit'
+
+rootProject.children.each { project ->
+    def groovyFile = new File(project.buildFile.parentFile, "${project.name}.gradle")
+    project.buildFileName = groovyFile.isFile()
+            ? groovyFile.name
+            : "${project.name}.gradle.kts"
+    project.name = "sample-$project.name"
+}
