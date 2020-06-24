@@ -1,7 +1,8 @@
 rootProject.name = 'SpigradleSample'
 
 include 'spigot', 'spigot-kotlin',
-        'bungeecord', 'nukkit'
+        'bungeecord', 'bungeecord-kotlin',
+        'nukkit', 'nukkit-kotiln'
 
 rootProject.children.each { project ->
     def groovyFile = new File(project.buildFile.parentFile, "${project.name}.gradle")
