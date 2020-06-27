@@ -1,17 +1,15 @@
+import kr.entree.spigradle.data.Load
 import kr.entree.spigradle.kotlin.*
-import kr.entree.spigradle.data.*
 
 plugins {
     kotlin("jvm") version "1.3.72"
-    id("kr.entree.spigradle") version "1.3.0"
+    id("kr.entree.spigradle") version "1.3.1"
 }
 
 group = "kr.entree"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenCentral()
-    jcenter()
     protocolLib()
     jitpack() // For vault
 }
@@ -32,4 +30,23 @@ spigot {
     description = "A sample plugin"
     depends = listOf("ProtocolLib", "Vault")
     load = Load.STARTUP
+    commands {
+        create("give") {
+            aliases = listOf("giv", "i")
+            description = "A give command."
+            permission = "sample.give"
+            permissionMessage = "You do not have the permission!"
+        }
+    }
+    permissions {
+        create("sample.give") {
+            description = "Allows give command"
+            defaults = "true"
+        }
+        create("sample.*") {
+            description = "Wildcard permission"
+            defaults = "op"
+            children = mapOf("test.foo" to true)
+        }
+    }
 }

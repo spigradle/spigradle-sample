@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPluginLoader;
 
 import java.io.File;
 
-@PluginMain // Annotation is optional, but recommended many cases.
+@PluginMain // Annotation is optional, but recommended in many cases
 public class SpigradleSample extends JavaPlugin {
     public SpigradleSample() {
     }

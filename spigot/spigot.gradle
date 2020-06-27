@@ -2,15 +2,13 @@ import kr.entree.spigradle.data.Load
 
 plugins {
     id 'java'
-    id 'kr.entree.spigradle' version '1.3.0'
+    id 'kr.entree.spigradle' version '1.3.1'
 }
 
 group 'kr.entree'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
-    jcenter()
     protocolLib()
     jitpack() // For vault
 }
@@ -29,4 +27,23 @@ spigot {
     description 'A sample plugin'
     depends 'ProtocolLib', 'Vault'
     load Load.STARTUP // or implicitly "load STARTUP".
+    commands {
+        give {
+            aliases 'giv', 'i'
+            description 'A give command.'
+            permission 'sample.give'
+            permissionMessage 'You do not have the permission.'
+        }
+    }
+    permissions {
+        'sample.give' {
+            description 'Allows give command'
+            defaults 'true'
+        }
+        'sample.*' {
+            description 'Wildcard permission'
+            defaults 'op'
+            children = ['test.foo': true]
+        }
+    }
 }
