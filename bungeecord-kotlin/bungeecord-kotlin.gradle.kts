@@ -2,7 +2,7 @@ import kr.entree.spigradle.kotlin.*
 
 plugins {
     kotlin("jvm") version "1.3.72"
-    id("kr.entree.spigradle.bungee") version "1.4.0"
+    id("kr.entree.spigradle.bungee") version "2.0.0"
 }
 
 group = "kr.entree"

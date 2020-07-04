@@ -1,6 +1,6 @@
 package kr.entree.samplespigot;
 
-import kr.entree.spigradle.PluginMain;
+import kr.entree.spigradle.annotations.PluginMain;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;

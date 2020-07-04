@@ -1,7 +1,7 @@
 package kr.entree.samplenukkit
 
 import cn.nukkit.plugin.PluginBase
-import kr.entree.spigradle.PluginMain
+import kr.entree.spigradle.annotations.PluginMain
 
 /**
  * Created by JunHyung Lim on 2020-06-28
