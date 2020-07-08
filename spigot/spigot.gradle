@@ -2,7 +2,7 @@ import kr.entree.spigradle.data.Load
 
 plugins {
     id 'java'
-    id 'kr.entree.spigradle' version '2.0.0'
+    id 'kr.entree.spigradle' version '2.0.1'
 }
 
 group 'kr.entree'

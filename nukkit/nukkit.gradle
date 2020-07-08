@@ -2,7 +2,7 @@ import kr.entree.spigradle.data.*
 
 plugins {
     id 'java'
-    id 'kr.entree.spigradle.nukkit' version '2.0.0'
+    id 'kr.entree.spigradle.nukkit' version '2.0.1'
 }
 
 group 'kr.entree'
