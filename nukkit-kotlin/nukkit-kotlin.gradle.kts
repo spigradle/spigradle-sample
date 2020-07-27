@@ -3,17 +3,13 @@ import kr.entree.spigradle.kotlin.*
 
 plugins {
     kotlin("jvm") version "1.3.72"
-    id("kr.entree.spigradle.nukkit") version "2.0.1"
+    id("kr.entree.spigradle.nukkit") version "2.1.1"
 }
 
 group = "kr.entree"
 version = "1.0-SNAPSHOT"
 
 tasks.compileJava.get().options.encoding = "UTF-8"
-
-repositories {
-    nukkitX()
-}
 
 dependencies {
     compileOnly(nukkit())
